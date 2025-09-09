@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         editInput = findViewById<EditText>(R.id.editName)
 
         myButton.setOnClickListener {
-            if (editInput.text.toString() != ""){
+            if (!editInput.text.isEmpty()){
                 displayMessage.text = "Hello, ${editInput.text}"
                 editInput.text.clear()
             }
